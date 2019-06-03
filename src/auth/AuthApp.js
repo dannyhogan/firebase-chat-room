@@ -1,5 +1,8 @@
+import { auth } from '../services/firebase.js';
 import Component from '../Component.js';
 import Header from '../shared/Header.js';
+
+const ui = new firebaseui.auth.AuthUI(auth);
 
 class AuthApp extends Component {
 
@@ -10,6 +13,15 @@ class AuthApp extends Component {
         const header = new Header();
         dom.insertBefore(header.render(), main);
 
+        ui.start('#firebaseui-auth-container', {
+            signInOptions: [
+                firebase.auth.EmailAuthProvider.PROVIDER_ID,
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID
+            ],
+            signInSuccessUrl: './',
+            credentialHelper: firebaseui.auth.CredentialHelper.NONE
+        });
+
         return dom;
     }
 
@@ -17,7 +29,10 @@ class AuthApp extends Component {
     renderTemplate() {
         return /*html*/`
             <div>
-                <main></main>
+                <main>
+                    <p>Sign in to start chatting!</p>
+                    <div id="firebaseui-auth-container"></div>
+                </main>
             </div>
         `;
     }
