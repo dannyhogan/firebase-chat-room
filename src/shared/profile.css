@@ -1,0 +1,27 @@
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 50px;
+}
+
+.profile img {
+    width: 25px;
+    height: 25px;
+    border: 1px solid gray;
+    border-radius: 100%;
+}
+
+.profile p {
+    color: white;
+    margin: 10px;
+}
+
+.profile button {
+    height: 30px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+}
