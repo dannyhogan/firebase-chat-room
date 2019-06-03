@@ -6,7 +6,6 @@ class Header extends Component {
         return /*html*/`
             <header>
                 <h1>Firebase Chat Room!</h1>
-                <h3>Sign in to start chatting!</h3>
             </header>
         `;
     }
