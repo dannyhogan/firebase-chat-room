@@ -19,7 +19,7 @@ class Header extends Component {
     renderTemplate() {
         return /*html*/`
             <header>
-                <h1>Firebase Chat Room!</h1>
+                <h1>Firebase Chat Room</h1>
             </header>
         `;
     }
