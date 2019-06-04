@@ -2,7 +2,12 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-right: 50px;
+    position: absolute;
+    top: 6%;
+    right: 5%;
+    background: rgba(128, 128, 128, 0.404);
+    border-radius: 10px;
+    padding: 0px 10px;
 }
 
 .profile img {
@@ -14,7 +19,7 @@
 
 .profile p {
     color: white;
-    margin: 10px;
+    margin: 15px;
 }
 
 .profile button {
@@ -25,6 +30,7 @@
     border-radius: 10px;
     outline: none;
     transition: .5s;
+    cursor: pointer;
 }
 
 .profile button:hover {
