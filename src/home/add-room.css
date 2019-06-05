@@ -1,11 +1,17 @@
 .add-room {
     margin: 10px;
-    background: gray;
+    background: linear-gradient(to right, rgb(70, 70, 70), rgba(173, 108, 10, 0.673));
     padding: 10px;
     width: 20vw;
     border: 2px solid white;
     border-radius: 10px;
+    transition: .75s;
 }       
+
+.add-room:hover {
+    box-shadow: 0px 0px 10px black;
+    transition: .75s;
+}
 
 .add-room button {
     background: transparent;
@@ -14,9 +20,25 @@
     margin: 10px;
     color: white;
     padding: 5px;
+    transition: .75s;
+}
+
+.add-room button:hover {
+    box-shadow: 0px 0px 5px white;
+    transition: .75s;
 }
 
 .add-room input {
     padding: 5px;
     outline: none;
+    border-radius: 10px;
+    border: none;
+    transition: .5s;
+    margin: 5px;
+    border: 2px solid rgb(213, 213, 213);
+}
+
+.add-room input:hover {
+    box-shadow: 0px 0px 5px black;
+    transition: .5s;
 }
