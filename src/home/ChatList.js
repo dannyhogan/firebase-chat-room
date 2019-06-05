@@ -1,5 +1,6 @@
 import Component from '../Component.js';
 import ChatItem from './ChatItem.js';
+import { chatroomsRef } from '../services/firebase.js';
 
 class ChatList extends Component {
 
@@ -9,9 +10,16 @@ class ChatList extends Component {
         const chatrooms = this.props.chatrooms;
 
         chatrooms.forEach(chatroom => {
-            const chatItem = new ChatItem({ chatroom });
+            const chatItem = new ChatItem({ 
+                chatroom,
+                onRemove:(chatroom => {
+                    chatroomsRef.child(chatroom.key).remove();
+                })
+            });
+
             list.appendChild(chatItem.render());
         });
+        
 
         return list;
     }
