@@ -1,5 +1,5 @@
 import Component from '../Component.js';
-import { auth, chatrooms } from '../services/firebase.js';
+import { auth, chatroomsRef } from '../services/firebase.js';
 
 class AddRoom extends Component {
 
@@ -8,7 +8,7 @@ class AddRoom extends Component {
 
         form.addEventListener('submit', event => {
             event.preventDefault();
-            const roomRef = chatrooms.push();
+            const roomRef = chatroomsRef.push();
             const formData = new FormData(form);
 
             const room = {
@@ -26,10 +26,10 @@ class AddRoom extends Component {
 
     renderTemplate() {
         return /*html*/`
-            <form class="add-room">
+            <form class="add-room"> 
                 <label>Name your room:</label>
                 <input name="name" required>
-                <button>Add Chat Room!</button>
+                <button>Add a chat room!</button>
             </form>
         `;
     }
