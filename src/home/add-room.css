@@ -1,0 +1,22 @@
+.add-room {
+    margin: 10px;
+    background: gray;
+    padding: 10px;
+    width: 20vw;
+    border: 2px solid white;
+    border-radius: 10px;
+}       
+
+.add-room button {
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 7.5px;
+    margin: 10px;
+    color: white;
+    padding: 5px;
+}
+
+.add-room input {
+    padding: 5px;
+    outline: none;
+}
