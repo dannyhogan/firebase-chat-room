@@ -19,7 +19,6 @@ class Profile extends Component {
 
     renderTemplate() {
         const user = this.props.user;
-
         if(!user) {
             return `<div></div>`;
         }
@@ -29,7 +28,7 @@ class Profile extends Component {
         return /*html*/`
             <div class="profile">
                 <img src="${avatar}">
-                <p>Danny Hogan</p>
+                <p>${user.displayName}</p>
                 <button>Sign Out</button>
             </div>
         `;
