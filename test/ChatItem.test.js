@@ -8,7 +8,7 @@ test('Returns a chat item from chatroom data', assert => {
     //arrange
 
     const chatroom = {
-        id: '1',
+        key: '1',
         name: 'Dannys',
         owner: 'doug'
     };
@@ -16,7 +16,7 @@ test('Returns a chat item from chatroom data', assert => {
     const expected = `
             <li>
                 <h2>Dannys Chatroom</h2>
-                <a href="/chat.html"><button>Join Room</button></a>
+                <a href="/chat.html?key=${chatroom.key}"><button>Join Room</button></a>
             </li>`;
 
     //act
