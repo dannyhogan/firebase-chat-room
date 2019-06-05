@@ -2,7 +2,7 @@ import Component from '../Component.js';
 import Header from '../shared/Header.js';
 import AddRoom from './AddRoom.js';
 import ChatList from './ChatList.js';
-import { chatrooms } from '../services/firebase.js';
+import { chatroomsRef } from '../services/firebase.js';
 
 class App extends Component {
 
@@ -19,9 +19,8 @@ class App extends Component {
         const chatList = new ChatList({ chatrooms: [] });
         main.appendChild(chatList.render());
 
-        chatrooms.on('value', snapshot => {
-            const chatrooms = Object.values(snapshot.val());
-            console.log(chatrooms);
+        chatroomsRef.on('value', snapshot => {
+            const chatrooms = snapshot.val() ? Object.values(snapshot.val()) : [];
             chatList.update({ chatrooms });
         });
 
