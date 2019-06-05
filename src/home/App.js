@@ -1,6 +1,7 @@
 import Component from '../Component.js';
 import Header from '../shared/Header.js';
 import AddRoom from './AddRoom.js';
+import { chatrooms } from '../services/firebase.js';
 
 class App extends Component {
 
@@ -13,6 +14,10 @@ class App extends Component {
 
         const addRoom = new AddRoom();
         main.appendChild(addRoom.render());
+
+        chatrooms.on('value', snapshot => {
+            console.log(snapshot.val());
+        });
 
         return dom;
     }
