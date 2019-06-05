@@ -1,5 +1,6 @@
 import Component from '../Component.js';
 import Header from '../shared/Header.js';
+import AddRoom from './AddRoom.js';
 
 class App extends Component {
 
@@ -9,6 +10,9 @@ class App extends Component {
 
         const header = new Header();
         dom.insertBefore(header.render(), main);
+
+        const addRoom = new AddRoom();
+        main.appendChild(addRoom.render());
 
         return dom;
     }
