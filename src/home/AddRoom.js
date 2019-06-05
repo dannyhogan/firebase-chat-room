@@ -18,7 +18,7 @@ class AddRoom extends Component {
             };
 
             roomRef.set(room);
-            console.log('set room ', roomRef.key);
+            form.reset();
         });
 
         return form;
@@ -26,7 +26,8 @@ class AddRoom extends Component {
 
     renderTemplate() {
         return /*html*/`
-            <form>
+            <form class="add-room">
+                <label>Name your room:</label>
                 <input name="name" required>
                 <button>Add Chat Room!</button>
             </form>
