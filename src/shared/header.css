@@ -6,6 +6,8 @@ header {
     justify-content: center;
     align-items: center;
     border-bottom: 2px solid white;
+    /* position: fixed; */
+    width: 100vw;
 }
 
 header h1 {

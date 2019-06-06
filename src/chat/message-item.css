@@ -1,0 +1,19 @@
+.message-item {
+    color: black;
+    display: flex;
+    font-size: 2em;
+}
+
+.message-item p {
+    margin: 5px;
+}
+
+.user {
+    font-weight: bolder;
+}
+
+.timestamp {
+    color: rgba(63, 63, 63, 0.616);
+    font-weight: lighter;
+    opacity: .5;
+}
