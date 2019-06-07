@@ -4,13 +4,16 @@ import { auth, chatroomsRef } from '../services/firebase.js';
 class AddRoom extends Component {
 
     render() {
-        const form = this.renderDOM();
+        const dom = this.renderDOM();
+        const input = dom.querySelector('input');
+        const form = dom.querySelector('form');
+
 
         form.addEventListener('submit', event => {
             event.preventDefault();
-            const roomRef = chatroomsRef.push();
             const formData = new FormData(form);
 
+            const roomRef = chatroomsRef.push();
             const room = {
                 key: roomRef.key,
                 owner: auth.currentUser.uid,
@@ -18,10 +21,11 @@ class AddRoom extends Component {
             };
 
             roomRef.set(room);
-            form.reset();
+
+            input.value = '';
         });
 
-        return form;
+        return dom;
     }
 
     renderTemplate() {
