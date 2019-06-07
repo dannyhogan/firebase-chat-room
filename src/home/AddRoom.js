@@ -26,11 +26,14 @@ class AddRoom extends Component {
 
     renderTemplate() {
         return /*html*/`
-            <form class="add-room"> 
-                <label>Name your room:</label>
-                <input name="name" required>
-                <button>Add a chat room!</button>
-            </form>
+            <section class="add-room">
+                <h1>Need a room to chat in?</h1>
+                <form> 
+                    <label>Create your own:</label>
+                    <input name="name" required>
+                    <button>Add chat room!</button>
+                </form>
+            </section>
         `;
     }
 }
