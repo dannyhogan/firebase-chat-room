@@ -1,13 +1,13 @@
 header {
-    background: rgb(60, 60, 60);
+    background: rgba(60, 60, 60, 0.644);
     height: 20vh;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 2px solid white;
-    /* position: fixed; */
     width: 100vw;
+    
 }
 
 header h1 {

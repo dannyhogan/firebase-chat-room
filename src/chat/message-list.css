@@ -24,7 +24,7 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     background: rgba(62, 62, 62, 0.267);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.164);
 }
@@ -40,7 +40,7 @@
 }
 
 .send-message input {
-    background: transparent;
+    background: rgba(0, 0, 0, 0.13);
     width: 30vw;
     height: 35px;
     border: 2px solid white;
@@ -53,15 +53,20 @@
 .send-message button {
     color: white;
     font-size: 1em;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.288);
     height: 40px;
     border: 2px solid white;
     border-radius: 10px;
+    cursor: pointer;
     margin-left: 10px;
     transition: .75s;
+
 }
 
 .send-message button:hover {
-    color: rgb(19, 19, 19);
-    transition: .75s;
+    background: rgba(191, 191, 191, 0.288);
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.445);
 }
