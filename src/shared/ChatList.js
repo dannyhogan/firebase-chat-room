@@ -26,7 +26,11 @@ class ChatList extends Component {
 
     renderTemplate() {
         return /*html*/`
-            <ul class="chat-list"></ul>
+            <ul class="chat-list">
+                <li class="message-item">
+                    <h1 class="join-room-h1">Join an existing room:</h1>
+                </li>
+            </ul>
         `;
     }
 }
