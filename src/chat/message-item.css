@@ -1,19 +1,51 @@
 .message-item {
-    color: black;
+    color: rgb(255, 255, 255);
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     font-size: 2em;
-}
-
-.message-item p {
-    margin: 5px;
+    width: 65vw;
 }
 
 .user {
+    font-size: .6em;
     font-weight: bolder;
+    margin: 0;
+    padding: 0;
 }
 
 .timestamp {
-    color: rgba(63, 63, 63, 0.616);
+    color: rgb(232, 232, 232);
     font-weight: lighter;
     opacity: .5;
+    font-size: .4em;
+    margin: 0;
+    padding: 0;
+}
+
+.user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin: 10px;
+}
+
+.message-item:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.048);
+}
+
+.message-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+.message {
+    font-size: .75em;
+}
+
+.colon {
+    margin: 10px;
 }
