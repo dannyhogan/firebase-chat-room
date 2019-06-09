@@ -18,6 +18,10 @@ class ChatItem extends Component {
     renderTemplate() {
         const chatroom = this.props.chatroom;
 
+        if(!auth.currentUser) {
+            return `<div></div>`;
+        }
+
         return /*html*/`
             <li class="chat-item">
                 <h2>${chatroom.name} Chatroom -</h2>

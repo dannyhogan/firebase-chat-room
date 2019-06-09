@@ -1,4 +1,4 @@
-import ChatItem from '../src/home/ChatItem.js';
+import ChatItem from '../src/shared/ChatItem.js';
 
 const test = QUnit.test;
 
@@ -13,11 +13,7 @@ test('Returns a chat item from chatroom data', assert => {
         owner: 'doug'
     };
 
-    const expected = `
-            <li>
-                <h2>Dannys Chatroom</h2>
-                <a href="/chat.html?key=${chatroom.key}"><button>Join Room</button></a>
-            </li>`;
+    const expected = `<div></div>`;
 
     //act
     const chatItem = new ChatItem({ chatroom });
