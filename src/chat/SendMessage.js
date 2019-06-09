@@ -6,6 +6,11 @@ class SendMessage extends Component {
     render() {
         const form = this.renderDOM();
         const input = form.querySelector('input');
+        
+        // Auto focuses cursor in input field.
+        setTimeout(() => {
+            input.focus();
+        }, 0);
 
         const key = this.props.key;
 
