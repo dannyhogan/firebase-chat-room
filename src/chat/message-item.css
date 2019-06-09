@@ -5,6 +5,7 @@
     align-items: center;
     font-size: 2em;
     width: 65vw;
+    max-height: 10vh;
 }
 
 .user {
