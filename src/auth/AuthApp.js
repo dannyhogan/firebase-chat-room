@@ -28,7 +28,7 @@ class AuthApp extends Component {
 
     renderTemplate() {
         return /*html*/`
-            <div>
+            <div class="auth-parent">
                 <main>
                     <p>Sign in to start chatting!</p>
                     <div id="firebaseui-auth-container"></div>

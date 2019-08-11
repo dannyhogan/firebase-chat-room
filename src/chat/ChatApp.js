@@ -1,10 +1,12 @@
+import '../utils/check-auth.js';
 import Component from '../Component.js';
 import Header from '../shared/Header.js';
-import AddRoom from './AddRoom.js';
 import ChatList from '../shared/ChatList.js';
-import { chatroomsRef } from '../services/firebase.js';
+import MessageList from './MessageList.js';
+import { chatroomsRef, messagesRef } from '../services/firebase.js';
+import QUERY from '../QUERY.js';
 
-class App extends Component {
+class ChatApp extends Component {
 
     render() {
         const dom = this.renderDOM();
@@ -16,12 +18,19 @@ class App extends Component {
         const chatList = new ChatList({ chatrooms: [] });
         main.appendChild(chatList.render());
 
-        const addRoom = new AddRoom();
-        main.appendChild(addRoom.render());
+        const query = QUERY.parse(window.location.search.slice(1));
+
+        const messageList = new MessageList({ key: query.key, messages: [] });
+        main.appendChild(messageList.render());
 
         chatroomsRef.on('value', snapshot => {
             const chatrooms = snapshot.val() ? Object.values(snapshot.val()) : [];
             chatList.update({ chatrooms });
+        });
+
+        messagesRef.child(query.key).on('value', snapshot => {
+            const messages = Object.values(snapshot.val());
+            messageList.update({ messages });
         });
 
         return dom;
@@ -36,4 +45,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default ChatApp;

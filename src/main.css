@@ -6,5 +6,12 @@ body {
     text-align: center;
     font-family: 'Bebas Neue';
     color: white;
-    background: rgb(182, 182, 182);
+    background: rgb(46, 46, 46);
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

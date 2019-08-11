@@ -19,6 +19,7 @@ class Header extends Component {
     renderTemplate() {
         return /*html*/`
             <header>
+                <img src="../../assets/firebase.png">
                 <h1>Firebase Chat Room</h1>
             </header>
         `;
