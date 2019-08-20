@@ -1,10 +1,10 @@
-@import url("https://use.typekit.net/gma6ree.css");
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 body {
     padding: 0;
     margin: 0;
     text-align: center;
-    font-family: 'Bebas Neue';
+    font-family: 'Roboto';
     color: white;
     background: rgb(46, 46, 46);
     height: 100vh;
